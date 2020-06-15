@@ -1,0 +1,3 @@
+"c:\program files\winrar\rar.exe" a -ag -m5 -r F:\backup C:\users\Пользователь\PycharmProjects\ #win_cmd
+"c:\program files\winrar\rar.exe" a -ag -r "F:\backup" "C:\users\Пользователь\PycharmProjects\"
+zip_command = '"c:\\program files\\winrar\\rar.exe" a -ag -r {0} {1}'.format(target_dir, '',source_dir) #python3

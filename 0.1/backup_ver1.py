@@ -15,7 +15,7 @@ target = target_dir + os.sep + time.strftime('%Y%m%d%H%M%S') + '.zip'
 # zip_command = "zip -qr {0} {1}".format(target_dir,' '.join(source_dir))   #It's no work
 # zip_command = '"c:\\program files\\winrar\\rar.exe" a -ag -m5 -r F:\\backup C:\\users\\Пользователь\\PycharmProjects\\' # It's work
 # zip_command = '"c:\\program files\\winrar\\rar.exe" a -ag -r F:\\backup C:\\users\\Пользователь\\PycharmProjects\\'# It's work
-zip_command = '"c:\\program files\\winrar\\rar.exe" a -ag -r {0} {1} {2}'.format(target_dir, '', source_dir)
+zip_command = '"c:\\program files\\winrar\\rar.exe" a -ag -r {0} {1}'.format(target_dir, ''.join(source_dir))
 # print(type(zip_command))
 # zip_command = '"c:\\program files\\winrar\\rar.exe" a -ag -r {0} {1}'.format(target_dir,' '.join(source_dir))"
 print(zip_command)

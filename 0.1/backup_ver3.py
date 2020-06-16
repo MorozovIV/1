@@ -5,7 +5,6 @@ import time
 source_dir = "C:\\users\\Пользователь\\PycharmProjects\\"
 target_dir = "F:\\backup"
 today = target_dir + "_" + time.strftime('%d%m%Y')
-#now = time.strftime('%H%M%S')
 comment = input("Введите комментарий -->")
 if not os.path.exists(today):
     os.mkdir(today)
@@ -16,7 +15,7 @@ else:
     target = today + os.sep + '_' + comment.replace(' ', '_') + '_' + '.zip'
 
 #target = today + os.sep + now + '.zip'
-zip_command = '"c:\\program files\\winrar\\rar.exe" a -agDDMMYYYY -r {0} {1}'.format(target, ''.join(source_dir))
+zip_command = '"c:\\program files\\winrar\\rar.exe" a -agHHMM -r {0} {1}'.format(target, ''.join(source_dir))
 if os.system(zip_command) == 0:
     print('Каталог успешно создан', today)
     print("Резервная копия успешно создана в", target)

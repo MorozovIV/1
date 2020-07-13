@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python</title>
+</head>
+
+<script type="text/javascript" charset="utf-8">
+                    function httpGetAsync(method, callback) {
+                        var xmlHttp = new XMLHttpRequest();
+                        xmlHttp.onreadystatechange = function() {
+                            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                                callback(xmlHttp.responseText);
+                        }
+                        xmlHttp.open("GET", window.location.href + method, true);
+                        xmlHttp.send(null);
+                    }
+
+                    function ledOn() {
+                        console.log("Led ON...");
+                        httpGetAsync("led/on", function(){ console.log("Done"); });
+                    }
+
+                    function ledOff() {
+                        console.log("Led OFF...");
+                        httpGetAsync("led/off", function(){ console.log("Done"); });
+                    }
+              </script>
+
+<body>
+<h1>
+    яндекс
+</h1>
+
+<p>
+    Сервер работает
+</p>
+
+<p><button class="button button_led" onclick="ledOn();">Led ON</button></p>
+<p><button class="button button_led" onclick="ledOff();">Led OFF</button></p>
+
+</body>
+</html>

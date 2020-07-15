@@ -1,0 +1,50 @@
+from bottle import route, run
+import RPi.GPIO as GPIO
+
+host = '10.10.21.205'
+
+pinButton = 17
+pinLed = 18
+GPIO.setmode(GPIO.BCM)
+# pin 17 as input with pull-up resistor
+GPIO.setup(pinButton, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+# pin 18 as output
+GPIO.setup(pinLed, GPIO.OUT)
+
+LedState = False
+
+def read_button():
+    if GPIO.input(pinButton):
+        return 'Не нажата'
+    else:
+        return 'Нажата'
+
+def update_led():
+    GPIO.output(pinLed, LedState)
+    
+def toggleLed():
+    global LedState
+    LedState = not LedState
+    
+@route('/')
+@route('/<arg>')
+def index(arg=""):
+    if arg == "toggle":
+        toggleLed()
+        
+    update_led()
+    
+    response = "<html>\n"
+    response += "<body>\n"
+    response += "<script>\n"
+    response += "function changed()\n"
+    response += "{window.location.href='/toggle'}\n"
+    response += "</script>\n"
+    
+    response += "Кнопка: " + read_button() +"\n"
+    response += "<br/><br/>\n"
+    response += "<input type='button' onClick='changed()' value=' LED '/>\n"
+    response += "</body></html>\n"
+    return response
+    
+run(host=host, port=80)

@@ -7,5 +7,8 @@
     <content url="file://$MODULE_DIR$/venv" />
     <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Raspberry" />
+    <orderEntry type="module" module-name="Arduino" />
+    <orderEntry type="module" module-name="test learn python" />
   </component>
 </module>

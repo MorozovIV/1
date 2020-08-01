@@ -1,6 +1,8 @@
 import http.server  #https://habr.com/ru/post/472464/
 import socketserver
+import my_modules
 
+my_modules.vremya()
 PORT = 8080
 IP = '127.0.0.1'
 Handler = http.server.SimpleHTTPRequestHandler

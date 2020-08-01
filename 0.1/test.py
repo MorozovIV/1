@@ -1,5 +1,3 @@
-x = int(input())
-h = x // 60
-m = x % 60
-print(h)/f
-print(m)
+import time
+vremya_now=time.strftime("Today is %d %B %Y, %H:%m", time.localtime())
+print(vremya_now)

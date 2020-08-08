@@ -3,5 +3,5 @@ def hello():
 #
 def vremya():
     import time
-    vremya_now=time.strftime("Today is %d %B %Y, %H:%m", time.localtime())
-    print(vremya_now)
+    vremya = time.strftime("%m/%d/%Y, %H:%M:%S", time.localtime())
+    print(vremya)

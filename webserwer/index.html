@@ -3,6 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Python</title>
+
+<script type="text/javascript">
+function startTime()
+{
+var tm=new Date();
+var h=tm.getHours();
+var m=tm.getMinutes();
+var s=tm.getSeconds();
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('timer').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i < 10)
+{
+i="0" + i;
+}
+return i;
+}
+</script>
+
 </head>
 
 <script type="text/javascript" charset="utf-8">
@@ -29,15 +52,18 @@
 
 <body>
 <h1>
-    яндекс
+    Заголовок
 </h1>
 
 <p>
     Сервер работает
-</p>
+<body onload="startTime()">
+<div id="timer"></div>
+</body>
 
 <p><button class="button button_led" onclick="ledOn();">Led ON</button></p>
 <p><button class="button button_led" onclick="ledOff();">Led OFF</button></p>
+<p><button class="button button_led" onclick="vremya();">vremya</button></p>
 
 </body>
 </html>

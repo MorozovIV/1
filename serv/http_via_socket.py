@@ -1,11 +1,19 @@
 import socket
 
+def parse_http_response(text_response):
+    lines = text_response.split('\n')
+    status_raw, lines = lines[0], lines[1:]
+    protocol, status_code, message = status_raw.split(' ')
+    empty_index = 1
+    headers = {}
+    for index, line
+
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect(('example.com', 80))
+sock.connect(('ag.ru', 80))
 sock.send(b'Test message')
 content_items = [
     'GET / HTTP/1.1',
-    'Host: example.com',
+    'Host: ag.ru',
     'Connection: keep-alive',
     'Accept: text/html',
     '\n'

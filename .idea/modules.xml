@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/1.iml" filepath="$PROJECT_DIR$/.idea/1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arduino/.idea/Arduino.iml" filepath="$PROJECT_DIR$/Arduino/.idea/Arduino.iml" />
       <module fileurl="file://$PROJECT_DIR$/Raspberry/.idea/Raspberry.iml" filepath="$PROJECT_DIR$/Raspberry/.idea/Raspberry.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../test/.idea/test learn python.iml" filepath="$PROJECT_DIR$/../test/.idea/test learn python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/.idea/test learn python.iml" filepath="$PROJECT_DIR$/test/.idea/test learn python.iml" />
     </modules>
   </component>
 </project>

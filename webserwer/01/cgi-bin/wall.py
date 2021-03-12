@@ -47,7 +47,7 @@ pattern = '''
 </head>
 <body>
     Форма логина и регистрации. При вводе несуществующего имени зарегистрируется новый пользователь.
-    <form action="/cgi-bin/wall.py">
+    <form action="/cgi-bin/_wall.py">
         Логин: <input type="text" name="login">
         Пароль: <input type="password" name="password">
         <input type="hidden" name="action" value="login">
@@ -63,7 +63,7 @@ pattern = '''
 
 if user is not None:
     pub = '''
-    <form action="/cgi-bin/wall.py">
+    <form action="/cgi-bin/_wall.py">
         <textarea name="text"></textarea>
         <input type="hidden" name="action" value="publish">
         <input type="submit">

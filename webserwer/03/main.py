@@ -1,8 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
+
 app = Flask(__name__)
 
 @app.route('/user/<string:name>/<int:id>')
-def user(name,id):
+def user(name, id):
     return "Hi, !" + name + "-" + str(id)
 
 @app.route('/')

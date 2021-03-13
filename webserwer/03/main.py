@@ -11,6 +11,14 @@ def user(name, id):
 def index():
     return render_template("index.html")
 
+@app.route('/down')
+def down():
+    return render_template("down.html")
+
+@app.route('/help')
+def help():
+    return render_template("help.html")
+
 @app.route('/about')
 def about():
     return render_template("about.html")
